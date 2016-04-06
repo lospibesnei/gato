@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nropeople:</strong>
+  <%= @docente.nropeople %>
+</p>
+
+<p>
+  <strong>Apellido:</strong>
+  <%= @docente.apellido %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @docente.nombre %>
+</p>
+
+<p>
+  <strong>Emailuap:</strong>
+  <%= @docente.emailuap %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @docente.sexo %>
+</p>
+
+<p>
+  <strong>Fechancimiento:</strong>
+  <%= @docente.fechancimiento %>
+</p>
+
+<p>
+  <strong>Carrera:</strong>
+  <%= @docente.carrera %>
+</p>
+
+<p>
+  <strong>Añolectivo:</strong>
+  <%= @docente.añolectivo %>
+</p>
+
+<%= link_to 'Edit', edit_docente_path(@docente) %> |
+<%= link_to 'Back', docentes_path %>

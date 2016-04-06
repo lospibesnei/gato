@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nroalumno: 1
+  apellido: MyString
+  nombre: MyString
+  emailuap: MyString
+  sexo: false
+  vidaestudiantil: false
+  fechanacimiento: 2016-04-06
+  carrera: MyString
+  cohorte: 2016-04-06
+  añolectivo: 2016-04-06
+  matriculado: false
+
+two:
+  nroalumno: 1
+  apellido: MyString
+  nombre: MyString
+  emailuap: MyString
+  sexo: false
+  vidaestudiantil: false
+  fechanacimiento: 2016-04-06
+  carrera: MyString
+  cohorte: 2016-04-06
+  añolectivo: 2016-04-06
+  matriculado: false

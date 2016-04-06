@@ -1,0 +1,29 @@
+<%= form_for(@derivacion) do |f| %>
+  <% if @derivacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@derivacion.errors.count, "error") %> prohibited this derivacion from being saved:</h2>
+
+      <ul>
+      <% @derivacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :observaciones %><br>
+    <%= f.text_field :observaciones %>
+  </div>
+  <div class="field">
+    <%= f.label :entrevista_id %><br>
+    <%= f.collection_select(:entrevista_id, Entrevista.all, :id) %>
+  </div>
+  <div class="field">
+    <%= f.label :departamento_id %><br>
+    <%= f.collection_select(:departamento_id, Departamento.all, :id, :nombre) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

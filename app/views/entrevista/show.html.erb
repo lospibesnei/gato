@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Asistencia:</strong>
+  <%= @entrevistum.asistencia %>
+</p>
+
+<p>
+  <strong>Observacion:</strong>
+  <%= @entrevistum.observacion %>
+</p>
+
+<p>
+  <strong>Tipoentrevista:</strong>
+  <%= @entrevistum.tipoentrevista %>
+</p>
+
+<%= link_to 'Edit', edit_entrevistum_path(@entrevistum) %> |
+<%= link_to 'Back', entrevista_path %>

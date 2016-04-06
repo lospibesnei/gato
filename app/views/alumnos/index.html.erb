@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Alumnos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nroalumno</th>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Emailuap</th>
+      <th>Sexo</th>
+      <th>Interno</th>
+      <th>Fechanacimiento</th>
+      <th>Carrera</th>
+      <th>Cohorte</th>
+      <th>Añolectivo</th>
+      <th>Matriculado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alumnos.each do |alumno| %>
+      <tr>
+        <td><%= alumno.nroalumno %></td>
+        <td><%= alumno.apellido %></td>
+        <td><%= alumno.nombre %></td>
+        <td><%= alumno.emailuap %></td>
+        <td><%= alumno.sexo %></td>
+        <td><%= alumno.vidaestudiantil %></td>
+        <td><%= alumno.fechanacimiento %></td>
+        <td><%= alumno.carrera %></td>
+        <td><%= alumno.cohorte %></td>
+        <td><%= alumno.añolectivo %></td>
+        <td><%= alumno.matriculado %></td>
+        <td><%= link_to 'Show', alumno %></td>
+        <td><%= link_to 'Edit', edit_alumno_path(alumno) %></td>
+        <td><%= link_to 'Destroy', alumno, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alumno', new_alumno_path %>

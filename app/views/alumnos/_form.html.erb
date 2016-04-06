@@ -1,0 +1,61 @@
+<%= form_for(@alumno) do |f| %>
+  <% if @alumno.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alumno.errors.count, "error") %> prohibited this alumno from being saved:</h2>
+
+      <ul>
+      <% @alumno.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nroalumno %><br>
+    <%= f.number_field :nroalumno %>
+  </div>
+  <div class="field">
+    <%= f.label :apellido %><br>
+    <%= f.text_field :apellido %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :emailuap %><br>
+    <%= f.text_field :emailuap %>
+  </div>
+  <div class="field">
+    <%= f.label :sexo %><br>
+    <%= f.check_box :sexo %>
+  </div>
+  <div class="field">
+    <%= f.label :interno %><br>
+    <%= f.check_box :vidaestudiantil %>
+  </div>
+  <div class="field">
+    <%= f.label :fechanacimiento %><br>
+    <%= f.date_select :fechanacimiento %>
+  </div>
+  <div class="field">
+    <%= f.label :carrera %><br>
+    <%= f.text_field :carrera %>
+  </div>
+  <div class="field">
+    <%= f.label :cohorte %><br>
+    <%= f.date_select :cohorte %>
+  </div>
+  <div class="field">
+    <%= f.label :añolectivo %><br>
+    <%= f.date_select :añolectivo %>
+  </div>
+  <div class="field">
+    <%= f.label :matriculado %><br>
+    <%= f.check_box :matriculado %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

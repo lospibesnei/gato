@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Docentes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nropeople</th>
+      <th>Apellido</th>
+      <th>Nombre</th>
+      <th>Emailuap</th>
+      <th>Sexo</th>
+      <th>Fechancimiento</th>
+      <th>Carrera</th>
+      <th>Añolectivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @docentes.each do |docente| %>
+      <tr>
+        <td><%= docente.nropeople %></td>
+        <td><%= docente.apellido %></td>
+        <td><%= docente.nombre %></td>
+        <td><%= docente.emailuap %></td>
+        <td><%= docente.sexo %></td>
+        <td><%= docente.fechancimiento %></td>
+        <td><%= docente.carrera %></td>
+        <td><%= docente.añolectivo %></td>
+        <td><%= link_to 'Show', docente %></td>
+        <td><%= link_to 'Edit', edit_docente_path(docente) %></td>
+        <td><%= link_to 'Destroy', docente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Docente', new_docente_path %>

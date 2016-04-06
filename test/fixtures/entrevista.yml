@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  asistencia: false
+  observacion: MyString
+  tipoentrevista: false
+
+two:
+  asistencia: false
+  observacion: MyString
+  tipoentrevista: false

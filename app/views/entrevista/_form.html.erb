@@ -1,0 +1,45 @@
+<%= form_for(@entrevistum) do |f| %>
+  <% if @entrevistum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entrevistum.errors.count, "error") %> prohibited this entrevistum from being saved:</h2>
+
+      <ul>
+      <% @entrevistum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :asistencia %><br>
+    <%= f.check_box :asistencia %>
+  </div>
+  <div class="field">
+    <%= f.label :observacion %><br>
+    <%= f.text_field :observacion %>
+  </div>
+  <div class="field">
+    <%= f.label :tipoentrevista %><br>
+    <%= f.check_box :tipoentrevista %>
+  </div>
+  <div class="field">
+    <%= f.label :horario_id %><br>
+    <%= f.collection_select(:horario_id, Horario.all, :id, :hora) %>
+  </div>
+  <div class="field">
+    <%= f.label :aula_id %><br>
+    <%= f.collection_select(:aula_id, Aula.all, :id, :nombre) %>
+  </div>
+  <div class="field">
+    <%= f.label :motivo_id %><br>
+    <%= f.collection_select(:motivo_id, Motivo.all, :id, :tipo) %>
+  </div>
+  <div class="field">
+    <%= f.label :alumno_id %><br>
+    <%= f.collection_select(:alumno_id, Alumno.all, :id, :nombre) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
